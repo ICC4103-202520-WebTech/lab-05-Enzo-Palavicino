@@ -1,0 +1,10 @@
+<h1><%= @service.name %></h1>
+
+<table class="table table-bordered">
+  <tbody class= "table-secondary">
+    <tr><th>Price</th><td>$<%= @service.price %></td></tr>
+    <tr><th>Active</th><td><%= @service.is_active ? "Yes" : "No" %></td></tr>
+  </tbody>
+</table>
+
+<%= link_to "Back to Services", services_path, class: "btn btn-secondary" %>

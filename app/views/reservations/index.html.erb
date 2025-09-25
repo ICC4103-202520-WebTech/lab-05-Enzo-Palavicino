@@ -1,0 +1,26 @@
+<h1 class="mb-3">Reservations</h1>
+
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Code</th>
+      <th>Guest ID</th>
+      <th>Room ID</th>
+      <th>Check-in</th>
+      <th>Check-out</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class= "table-secondary">
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.code %></td>
+        <td><%= reservation.guest_id %></td>
+        <td><%= reservation.room_id %></td>
+        <td><%= reservation.check_in %></td>
+        <td><%= reservation.check_out %></td>
+        <td><%= link_to "View", reservation_path(reservation), class: "btn btn-sm btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

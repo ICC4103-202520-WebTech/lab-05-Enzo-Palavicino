@@ -1,0 +1,11 @@
+<h1><%= @guest.first_name %> <%= @guest.last_name %></h1>
+
+<table class="table table-bordered">
+  <tbody class= "table-secondary">
+    <tr><th>Email</th><td><%= @guest.email %></td></tr>
+    <tr><th>Phone</th><td><%= @guest.phone %></td></tr>
+    <tr><th>Document ID</th><td><%= @guest.document_id %></td></tr>
+  </tbody>
+</table>
+
+<%= link_to "Back to Guests", guests_path, class: "btn btn-secondary" %>

@@ -1,0 +1,24 @@
+<h1 class="mb-3">Rooms</h1>
+
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Number</th>
+      <th>Type</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class= "table-secondary">
+    <% @rooms.each do |room| %>
+      <tr>
+        <td><%= room.number %></td>
+        <td><%= room.room_type %></td>
+        <td>$<%= room.price %></td>
+        <td><%= room.status %></td>
+        <td><%= link_to "View", room_path(room), class: "btn btn-sm btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

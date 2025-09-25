@@ -1,0 +1,23 @@
+<h1 class="mb-3">Services</h1>
+
+<table class="table table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Active</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class= "table-secondary">
+    <% @services.each do |service| %>
+      <tr>
+        <td><%= service.name %></td>
+        <td>$<%= service.price %></td>
+        <td><%= service.is_active ? "Yes" : "No" %></td>
+        <td><%= link_to "View", service_path(service), class: "btn btn-sm btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
